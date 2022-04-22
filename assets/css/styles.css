@@ -1,0 +1,310 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+color: #ffffff;
+}
+
+html {
+scroll-behavior: smooth;
+
+}
+body{
+background: #1f1d2c;
+
+}
+
+.contenedor{
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.25rem;
+    height: 55px;
+
+}
+
+nav ul li {
+    list-style: none;
+    font-family: "montserrat" , sans-serif ;
+}
+
+nav > label > img{
+    width: 24px;
+}
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa ~ ul{
+    background-color: #1f1d2c;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: calc( 100vh - 55px );
+    top: 55px;
+    right: 100%;
+    transition: all 300ms linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    right: 0;
+}
+@media only screen and ( min-width: 600px ){
+    label{
+        display: none;
+    }
+
+    input#menu-hamburguesa ~ ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;
+        transition: none;
+    }
+
+    nav > ul > li{
+        display: inline-block;
+        margin-left: 1rem;
+        
+    }
+    nav>ul>li>a:hover{
+color: #F1A600;
+
+    }
+
+
+    .rectangulo-arriba{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        width:  42vw;
+    }
+    .foto{
+     position: relative;
+        height: auto;
+        width: 50%;
+        left: 95%;
+        z-index: -1;
+
+    }
+    h2{
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+
+/* Texto de nombre*/
+
+.texto-justificado{
+    text-align: justify;
+    font-family: "montserrat" , sans-serif ;
+    font-size: 150px;
+
+}
+.texto-p1{
+text-align: justify;
+font-size: 18px;
+}
+.texto-p2{
+text-align: justify;
+margin-top: 0rem;
+font-size: 50px;
+}
+.texto-p3{
+text-align: justify;
+
+}
+main{
+    padding: 50px 25px;
+    margin: 0px 150px;
+    width: 70%;
+    
+}
+.iconos{
+    border: 5px ;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 150px;
+}
+.texto4{
+    color:#F1A600 ;
+}
+
+    /*Acerca de mi*/
+    .acerca-de-mi{
+     margin: auto;
+     display: block;
+    }
+
+
+main h2{
+text-align: center;
+}
+
+.contenedor-1{
+    min-height: 20vh;
+    padding: 1rem;
+    display:block;
+    text-align: center;
+}
+.texto-acerca{
+    font-size: 16px;
+    line-height: 25px;
+    }
+
+
+
+.logo-academlo{
+font-size: 1.5rem;
+height: 150px;
+width: 150px;
+
+
+}
+
+.titulo_academlo{
+    font-size: 16px;
+    line-height: 25px;
+
+}
+
+    /*Mis habilidades*/
+.texto-hab{
+text-align: left;
+font-size: 32px;
+
+}
+.rectangulo2{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.contenedor-grid-3{
+    min-height: 60vh;
+    padding: 1rem 10rem;
+    display: grid;      
+   grid-template-columns: 0.14fr 0.2fr;
+   grid-template-rows: 0.5fr 0.5fr 0.5fr;
+   
+
+}
+
+.grid-item-b{
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 5px;
+
+    }
+.porcentaje{
+color: #F1A600;
+text-transform: uppercase;
+font-weight: bold;
+
+}
+/*CV*/
+.curriculum{
+    min-height: 20vh;
+    padding-left: 10rem;
+    display:block;
+    text-align: left;
+   
+   }
+.CV:hover{
+color:#F1A600;
+}
+
+/*Mi Portafolio*/
+.mi-portafolio{
+        min-height: 20vh;
+        padding-left: 10rem;
+        padding-bottom: 10rem;
+        display:flex;
+        flex-direction:column;    
+       }
+.Ecommerce{
+
+z-index: 1;
+margin: 20px;
+position: absolute;
+
+}
+
+.training{
+    z-index: 1;
+
+    margin: 20px;
+    position: absolute;
+
+    
+}
+
+.writer{
+    z-index: 1;
+
+    margin: 20px;
+    position: absolute;
+
+}
+
+.Cuadro-imagen1{
+width:532px ;
+height:350px ;
+background-color: #F1A600;
+z-index: -1;
+top: -420px;
+margin: 13px;
+
+}
+.Cuadro-imagen2{
+    width:532px ;
+    height:350px ;
+    background-color: #1f1d2c;
+    z-index: -1;
+    top: -420px;
+    margin: 13px;
+    right: 0;
+    }
+}
+.Cuadro-imagen3{
+    width:532px ;
+    height:350px ;
+    background-color: #F1A600;
+    z-index: -1;
+    top: -420px;
+    margin: 13px;
+        }
+
+/*footer*/
+    .barra-footer{
+        z-index: -1;
+        width:100wv ;
+        height:100hv ;
+        background-color: #242635;
+        z-index: 2;
+        margin: 13px solid black;
+        text-align: center;
+
+    }
+.telefono{
+    display: block;
+
+}
+footer{
+    text-align: center;
+}
